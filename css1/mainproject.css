@@ -1,141 +1,172 @@
-*,*::after,*::before{
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --BGCOLOR: orange;
-    --BGCOLOR-FADE:rgb(252, 220, 160);
-    --BODY-BGCOLOR: white;
-    --BGIMAGE: linear-gradient(to bottom, var(var(--BGCOLOR), var(var(--BGCOLOR-FADE))));
+
+:root {
+    --BGCOLOR: #FFA500; /* Orange */
+    --BGCOLOR-FADE: #FCDCA0; /* Lighter Orange */
+    --BODY-BGCOLOR: #FFFFFF; /* White */
+    --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
 }
-html{
+
+html {
     font-family: sans-serif;
     scroll-behavior: smooth;
     background-color: var(--BGCOLOR);
     background-image: var(--BGIMAGE);
 }
-summary{
+
+.header__h1 {
+    margin-bottom: 1rem;
+    background-color: #000000; /* Black */
+    color: #FFFFFF; /* White */
+    text-align: center;
+}
+
+.offscreen {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #008000; /* Green */
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #008000; /* Green */
     margin-bottom: 1rem;
 }
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    
-}
-input, textarea{
-    font-family: 'Times New Roman', Times, serif;
 
+.hero__h2 {
+    margin: 1rem;
+    color: #008000; /* Green */
 }
-button{
-    font-size: 1rem;
+/* Add this to your existing CSS */
+.articles {
+    margin-bottom: 20px; /* You can adjust the value as needed */
 }
-dl{
-    font-family: sans-serif;
-    font-size: 1rem;
+
+h3.tacos {
+    margin-top: 20px; /* You can adjust the value as needed */
 }
-li,a{
+
+/* Optionally, adjust the margin for the table heading */
+h2.tables {
+    margin-top: 20px; /* You can adjust the value as needed */
+}
+
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px double #000000; /* Black */
+    background-color: #FFFFFF; /* White */
+}
+
+article {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color: #008000; /* Green */
+}
+
+body {
+    min-height: 100vh;
+    max-width: 900px;
+    background-color: var(--BODY-BGCOLOR);
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+header a {
+    color: black;
+}
+
+li a {
     text-decoration: none;
     color: black;
     font-size: 1.5rem;
 }
-.header__h1{
-    margin-bottom: 1rem;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-.offscreen{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    color: green;
-}
-h1,h2{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-h3{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: green;
-    margin-bottom: 1rem ;
-}
-summary{
-    font-size: 1.2rem;
-    font-family: sans-serif;
-}
 
-.hero__h2{
-    margin: 1rem;
-    color: green;
-}
-ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-    border-bottom: 2px double black;
-    background-color: white;
-}
-.tacos{
-    margin-top: 1rem;
-}
-article{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    
-    font-size: 1.2rm;
-    color: green;
-}
-figcaption{
-    font-family: sans-serif;
-    text-align: center;
-}
-body{
-    min-height: 100vh;
-    max-width: 900px;
-    background-color:var(--BODY-BGCOLOR);
-    font-size: 1.2rem;
-    margin:0 auto;
-    
-}
-span{
-    font-size: 1.5rem;
-    
-}
-li a:hover,li a:focus{
+li a:hover,
+li a:focus {
     animation-name: slide;
     animation-duration: 2s;
     background-color: white;
     color: black;
 }
-footer{
+
+footer {
     text-align: center;
 }
-input,textarea{
-    padding: 0.5rem;
-    border-radius: 15px;
-}
 
-table,th,td{
+table,
+th,
+td {
     width: 100%;
-    border: 1px solid black;
-   background-color:darkgreen;
-    color:gold;
+    border: 1px solid #000000; /* Black */
+    background-color: #006400; /* Dark Green */
+    color: #FFD700; /* Gold */
     border-radius: 3px 3px 0 0;
 }
+
 @keyframes slide {
-    0%{
-        color: white;
-        background-color: black;
+    0% {
+        color: #FFFFFF; /* White */
+        background-color: #000000; /* Black */
     }   
-    50%{
-        color:black ;
-        background-color: gray;
-    
+    50% {
+        color: #000000; /* Black */
+        background-color: #808080; /* Gray */
     }
-    100%{
-        color:white;
-        background-color: black;
-        
+    100% {
+        color: #FFFFFF; /* White */
+        background-color: #000000; /* Black */
     }
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Ensure images don't exceed their container width */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+/* Add this to your existing CSS */
+.hero__h2 {
+    margin: 1rem;
+    color: #008000; /* Green */
+}
+
+.hero figure {
+    text-align: center;
+    margin: 20px 0; /* Adjust the margin as needed */
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Add border-radius for a rounded appearance */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.hero figcaption.offscreen {
+    font-style: italic;
+    color: #808080; /* Gray */
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+
+
+section figure {
+    text-align: center;
+    margin: 20px 0; /* Adjust the margin as needed */
+}
+
+section img {
+    max-width: 55%;
+    max-height: 400px; 
     
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
